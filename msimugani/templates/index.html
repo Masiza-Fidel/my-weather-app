@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>weatherapp</title>
+</head>
+<body>
+    <div class="devs" style="text-align:center;">
+        <hi class="wet" style="text-decoration:rgb(5, 5, 5); font-size:70px">Weather App</hi>
+    </div>
+    <div class="fm" style="background:white;color:grey;">
+        <h1 class="bass" style="text-align:center">Search For Location</h1>
+        <form method="POST" class="row" style="background:rgb(238, 227, 227);color:white; text-align:center">
+                 {%csrf_token%}
+            <div class="yooh" style="color:rgb(9, 9, 32)">
+                <input type="text" class="musila" name="city">
+                <div class="okey">
+                    <button type="submit" class="buttonn" style="color:blue;"></button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="phew" style="text-align:center">
+
+        <div class="col">
+            <h3 class="kipi" style="font-size:45px">{{city}}</h3>
+            <h5 class="ladha" style="font-size:20px">country code:{{data.country_code}}</h5>
+            <h5 class="ladha" style="font-size:20px"> coordinate:{{data.coordinates}}</h5>
+            <h5 class="ladha" style="font-size:20px">temp:{{data.temp}}</h5>
+            <h5 class="ladha"style="font-size:20px">pressure:{{data.pressure}}</h5>
+            <h5 class="ladha"style="font-size:20px">humidity:{{data.humidity}}</h5>
+            
+        </div>
+    </div>
+</body>
+</html>
